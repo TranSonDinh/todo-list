@@ -81,13 +81,13 @@ body{
 }
 .classify button {
   background-color: #fff;
-  border: 0;
+  border: 1px solid #fff;
   height: 30px;
   width: 85px;
   text-align: center;
   outline: none;
   margin-top: 8px ;
 }
-.classify button:focus{
-  background-color: #e1e1e1;
+.classify button.selected{
+  border-color: rgba(175, 47, 47, 0.2);
 }

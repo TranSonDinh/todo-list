@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import TodoItems from './components/TodoItems.js';
 import tick from './img/tick.svg';
+import classNames from 'classnames';
 
 class App extends Component  {
   constructor() {
@@ -141,9 +142,9 @@ class App extends Component  {
           <div>
             <p className='totalItems'>{total} items</p>
             <div className='classify'>
-              <button onClick={this.clickAll}>All</button>
-              <button onClick={this.clickActive}>Active</button>
-              <button onClick={this.clickComplete}>Complete</button>
+              <button onClick={this.clickAll} className={classNames({'selected' : chon===0})}>All</button>
+              <button onClick={this.clickActive} className={classNames({'selected' : chon===1})}>Active</button>
+              <button onClick={this.clickComplete} className={classNames({'selected' : chon===2})}>Complete</button>
             </div>
           </div>
         </div>
